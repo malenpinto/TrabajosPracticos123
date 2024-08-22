@@ -21,7 +21,9 @@ namespace TrabajosPracticos123
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Practico1());
             //Application.Run(new Practico2());
-            Application.Run(new Practico3());
+            //Application.Run(new Practico3());
+            Application.Run(new MDIParent1());
+
         }
     }
 }
