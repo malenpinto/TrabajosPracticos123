@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajosPracticos123.TPractico1;
+using TrabajosPracticos123.TPractico2;
 
 namespace TrabajosPracticos123
 {
@@ -17,7 +18,7 @@ namespace TrabajosPracticos123
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Practico1());
+            Application.Run(new Practico2());
         }
     }
 }

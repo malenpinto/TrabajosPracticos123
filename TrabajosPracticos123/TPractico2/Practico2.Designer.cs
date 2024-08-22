@@ -35,9 +35,9 @@
             this.LModificar = new System.Windows.Forms.Label();
             this.BGuardar = new System.Windows.Forms.Button();
             this.BEliminar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TDni = new System.Windows.Forms.TextBox();
+            this.TNombre = new System.Windows.Forms.TextBox();
+            this.TApellido = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // LNya
@@ -100,6 +100,7 @@
             this.BGuardar.TabIndex = 5;
             this.BGuardar.Text = "Guardar";
             this.BGuardar.UseVisualStyleBackColor = true;
+            this.BGuardar.Click += new System.EventHandler(this.BGuardar_Click);
             // 
             // BEliminar
             // 
@@ -111,35 +112,38 @@
             this.BEliminar.Text = "Eliminar";
             this.BEliminar.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // TDni
             // 
-            this.textBox1.Location = new System.Drawing.Point(146, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 20);
-            this.textBox1.TabIndex = 7;
+            this.TDni.Location = new System.Drawing.Point(146, 118);
+            this.TDni.Name = "TDni";
+            this.TDni.Size = new System.Drawing.Size(163, 20);
+            this.TDni.TabIndex = 7;
+            this.TDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TDni_KeyPress);
             // 
-            // textBox2
+            // TNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(146, 212);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 20);
-            this.textBox2.TabIndex = 8;
+            this.TNombre.Location = new System.Drawing.Point(146, 212);
+            this.TNombre.Name = "TNombre";
+            this.TNombre.Size = new System.Drawing.Size(163, 20);
+            this.TNombre.TabIndex = 8;
+            this.TNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TNombre_KeyPress);
             // 
-            // textBox3
+            // TApellido
             // 
-            this.textBox3.Location = new System.Drawing.Point(146, 165);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(163, 20);
-            this.textBox3.TabIndex = 9;
+            this.TApellido.Location = new System.Drawing.Point(146, 165);
+            this.TApellido.Name = "TApellido";
+            this.TApellido.Size = new System.Drawing.Size(163, 20);
+            this.TApellido.TabIndex = 9;
+            this.TApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TApellido_KeyPress);
             // 
             // Practico2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 411);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TApellido);
+            this.Controls.Add(this.TNombre);
+            this.Controls.Add(this.TDni);
             this.Controls.Add(this.BEliminar);
             this.Controls.Add(this.BGuardar);
             this.Controls.Add(this.LModificar);
@@ -148,6 +152,7 @@
             this.Controls.Add(this.LDni);
             this.Controls.Add(this.LNya);
             this.Name = "Practico2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pequeño Formulario";
             this.Load += new System.EventHandler(this.Practico2_Load);
             this.ResumeLayout(false);
@@ -164,8 +169,8 @@
         private System.Windows.Forms.Label LModificar;
         private System.Windows.Forms.Button BGuardar;
         private System.Windows.Forms.Button BEliminar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TDni;
+        private System.Windows.Forms.TextBox TNombre;
+        private System.Windows.Forms.TextBox TApellido;
     }
 }

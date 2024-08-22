@@ -21,5 +21,74 @@ namespace TrabajosPracticos123.TPractico2
         {
 
         }
+
+        private void TDni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada no es un número y no es la tecla de retroceso
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Cancela la entrada de la tecla
+            }
+        }
+
+        private void TApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada no es una letra y no es la tecla de retroceso
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true; // Cancela la entrada de la tecla
+            }
+        }
+
+        private void TNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada no es una letra y no es la tecla de retroceso
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true; // Cancela la entrada de la tecla
+            }
+        }
+
+        private void BGuardar_Click(object sender, EventArgs e)
+        {
+            // Verifica si alguno de los TextBox está vacío
+            if (string.IsNullOrWhiteSpace(TDni.Text) || string.IsNullOrWhiteSpace(TNombre.Text) || string.IsNullOrWhiteSpace(TApellido.Text))
+            {
+                // Muestra un mensaje de error si falta completar algún campo
+                MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                // Variable para almacenar el resultado del MessageBox
+                DialogResult ask;
+
+                // Muestra un mensaje de confirmación
+                ask = MessageBox.Show(
+                    "¿Seguro que desea insertar un nuevo Cliente?",
+                    "Confirmar Inserción",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button1 // Foco en "Sí"
+                );
+
+                // Si el usuario selecciona "Sí"
+                if (ask == DialogResult.Yes)
+                {
+                    // Obtener los valores ingresados en los TextBox
+                    string nombre = TNombre.Text;
+                    string apellido = TApellido.Text;
+
+                    // Concatenar Nombre y Apellido
+                    string nombreCompleto = nombre + " " + apellido;
+
+                    //Tambien se puede hacer en una sola linea:
+                    //string nombreCompleto = TNombre.Text + " " + TApellido.Text;
+
+                    // Mostrar el nombre completo en el Label LModificar
+                    LModificar.Text = nombreCompleto;
+                }
+                // Si el usuario selecciona "No", no se hace nada y se cancela la acción
+            }
+        }
     }
 }
