@@ -86,6 +86,58 @@ namespace TrabajosPracticos123.TPractico2
 
                     // Mostrar el nombre completo en el Label LModificar
                     LModificar.Text = nombreCompleto;
+
+                    // Mostrar un mensaje de información indicando que el cliente se insertó correctamente
+                    MessageBox.Show(
+                        $"El cliente: {nombreCompleto} se registro correctamente",
+                        "Guardar",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+                // Si el usuario selecciona "No", no se hace nada y se cancela la acción
+            }
+        }
+
+        private void BEliminar_Click(object sender, EventArgs e)
+        {
+            // Verifica si alguno de los TextBox está vacío
+            if (string.IsNullOrWhiteSpace(TDni.Text) || string.IsNullOrWhiteSpace(TNombre.Text) || string.IsNullOrWhiteSpace(TApellido.Text))
+            {
+                // Muestra un mensaje de error si falta completar algún campo
+                MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                // Concatenar Nombre y Apellido para el mensaje de advertencia
+                string nombreCompleto = TNombre.Text + " " + TApellido.Text;
+
+                // Variable para almacenar el resultado del MessageBox
+                DialogResult ask;
+
+                // Muestra un mensaje de advertencia con el foco en "No"
+                ask = MessageBox.Show(
+                    $"Está apunto de eliminar el Cliente: {nombreCompleto}",
+                    "Confirmar Eliminación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Exclamation,
+                    MessageBoxDefaultButton.Button2 // Foco en "No"
+                );
+
+                // Si el usuario selecciona "Sí"
+                if (ask == DialogResult.Yes)
+                {
+                    // Limpiar todos los TextBox y el Label LModificar
+                    TDni.Clear();
+                    TNombre.Clear();
+                    TApellido.Clear();
+                    LModificar.Text = "";
+
+                    // Mostrar un mensaje de confirmación indicando que el cliente se eliminó correctamente
+                    MessageBox.Show(
+                        $"El cliente: {nombreCompleto} se elimino correctamente",
+                        "Eliminar",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                 }
                 // Si el usuario selecciona "No", no se hace nada y se cancela la acción
             }

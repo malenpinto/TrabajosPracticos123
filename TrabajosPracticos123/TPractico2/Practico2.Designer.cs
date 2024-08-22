@@ -111,6 +111,7 @@
             this.BEliminar.TabIndex = 6;
             this.BEliminar.Text = "Eliminar";
             this.BEliminar.UseVisualStyleBackColor = true;
+            this.BEliminar.Click += new System.EventHandler(this.BEliminar_Click);
             // 
             // TDni
             // 
