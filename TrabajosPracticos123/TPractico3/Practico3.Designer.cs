@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Practico3));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.CBMastercard = new System.Windows.Forms.CheckBox();
+            this.CBVisa = new System.Windows.Forms.CheckBox();
+            this.CBNaranja = new System.Windows.Forms.CheckBox();
             this.TTelefono = new System.Windows.Forms.TextBox();
             this.TNombre = new System.Windows.Forms.TextBox();
             this.TApellido = new System.Windows.Forms.TextBox();
@@ -58,9 +58,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel2.Controls.Add(this.checkBox3);
-            this.panel2.Controls.Add(this.checkBox2);
-            this.panel2.Controls.Add(this.checkBox1);
+            this.panel2.Controls.Add(this.CBMastercard);
+            this.panel2.Controls.Add(this.CBVisa);
+            this.panel2.Controls.Add(this.CBNaranja);
             this.panel2.Controls.Add(this.TTelefono);
             this.panel2.Controls.Add(this.TNombre);
             this.panel2.Controls.Add(this.TApellido);
@@ -78,35 +78,35 @@
             this.panel2.Size = new System.Drawing.Size(367, 463);
             this.panel2.TabIndex = 0;
             // 
-            // checkBox3
+            // CBMastercard
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(200, 393);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(116, 24);
-            this.checkBox3.TabIndex = 14;
-            this.checkBox3.Text = "Mastercard";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.CBMastercard.AutoSize = true;
+            this.CBMastercard.Location = new System.Drawing.Point(200, 393);
+            this.CBMastercard.Name = "CBMastercard";
+            this.CBMastercard.Size = new System.Drawing.Size(116, 24);
+            this.CBMastercard.TabIndex = 14;
+            this.CBMastercard.Text = "Mastercard";
+            this.CBMastercard.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // CBVisa
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(200, 363);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(64, 24);
-            this.checkBox2.TabIndex = 13;
-            this.checkBox2.Text = "Visa";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.CBVisa.AutoSize = true;
+            this.CBVisa.Location = new System.Drawing.Point(200, 363);
+            this.CBVisa.Name = "CBVisa";
+            this.CBVisa.Size = new System.Drawing.Size(64, 24);
+            this.CBVisa.TabIndex = 13;
+            this.CBVisa.Text = "Visa";
+            this.CBVisa.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // CBNaranja
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(200, 333);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(89, 24);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "Naranja";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.CBNaranja.AutoSize = true;
+            this.CBNaranja.Location = new System.Drawing.Point(200, 333);
+            this.CBNaranja.Name = "CBNaranja";
+            this.CBNaranja.Size = new System.Drawing.Size(89, 24);
+            this.CBNaranja.TabIndex = 12;
+            this.CBNaranja.Text = "Naranja";
+            this.CBNaranja.UseVisualStyleBackColor = true;
             // 
             // TTelefono
             // 
@@ -338,8 +338,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RadioButton RBVaron;
         private System.Windows.Forms.RadioButton RBMujer;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox CBMastercard;
+        private System.Windows.Forms.CheckBox CBVisa;
+        private System.Windows.Forms.CheckBox CBNaranja;
     }
 }

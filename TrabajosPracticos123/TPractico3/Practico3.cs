@@ -110,6 +110,11 @@ namespace TrabajosPracticos123.TPractico3
                     TNombre.Clear();
                     TApellido.Clear();
                     LModificar.Text = "";
+                    TTelefono.Clear();
+                    // Desmarcar los CheckBox de Visa, Naranja y Mastercard
+                    CBNaranja.Checked = false;
+                    CBVisa.Checked = false;
+                    CBMastercard.Checked = false;
 
                     // Mostrar un mensaje de confirmación indicando que el cliente se eliminó correctamente
                     MessageBox.Show(
